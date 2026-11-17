@@ -1,0 +1,9 @@
+# Apache 2.4 : AllowOverride doit autoriser ces directives.
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+RewriteRule ^(?:config|controllers|models|views|backups|database|docs|tests|tools)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
+<FilesMatch "(?i)(\.(sql|log|bak|tmp|ini|env|md|cjs|ps1)|~)$">
+    Require all denied
+</FilesMatch>

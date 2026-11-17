@@ -1,0 +1,52 @@
+# Configuration locale et secrets
+/config/database.php
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.codex/
+.agents/
+
+# Sauvegardes, rapports locaux et exports non approuves
+/backups/
+*.sql
+!/database/demo.sql
+/DIAGNOSTIC-IMAGES.md
+/image-http-checks.txt
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+/tmp/
+/temp/
+/logs/
+/cache/
+/sessions/
+
+# Photos : droits de republication a confirmer (voir docs/IMAGES.md)
+/uploads/*
+!/uploads/.gitkeep
+!/uploads/.htaccess
+/assets/images/*
+!/assets/images/.gitkeep
+
+# Les SVG originaux publics sont dans assets/demo/ (versionnes).
+/config/*.local.php
+/config/*.production.local.php
+/artifacts/
+/dist/
+
+# Outils locaux
+/.idea/
+/.vscode/
+/node_modules/
+/vendor/
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,8 @@
+# Les televersements publics doivent etre des images matricielles.
+Options -Indexes -ExecCGI
+<FilesMatch "(?i)^(?!.*\.(?:jpe?g|png|webp|gif)$).*$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "(?i)\.(php[0-9]?|phtml|phar|cgi|pl|py|sh|shtml)(\.|$)">
+    Require all denied
+</FilesMatch>

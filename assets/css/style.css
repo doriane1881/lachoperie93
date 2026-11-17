@@ -1,0 +1,456 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+    color: #f5f0e6;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #d4af37;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #f1d87a;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: rgba(10, 10, 10, 0.96);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 25px 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #d4af37;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #d8c690;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #f5f0e6;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4af37;
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.08);
+}
+
+/* =========================
+   MESSAGE UTILISATEUR CONNECTÉ
+========================= */
+header strong {
+    color: #d4af37;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+main h2 {
+    color: #d4af37;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    padding-bottom: 10px;
+}
+
+main h3 {
+    color: #e6c96b;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   PRODUITS
+========================= */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.product {
+    background: linear-gradient(180deg, #151515 0%, #101010 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.product p {
+    color: #eae2cf;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.product a {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 9px 16px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 30px;
+    color: #d4af37;
+    background: transparent;
+    font-size: 0.9rem;
+}
+
+.product a:hover {
+    background: rgba(212, 175, 55, 0.12);
+    color: #f7e3a0;
+}
+
+/* =========================
+   FORMULAIRES
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+label {
+    color: #d8c690;
+    font-size: 0.95rem;
+    margin-bottom: -6px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0f0f0f;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 10px;
+    color: #f5f0e6;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: fit-content;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #c9a227, #f1d87a);
+    color: #111;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 8px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(212, 175, 55, 0.18);
+}
+
+/* =========================
+   TABLEAU PANIER
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #141414;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+th {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    font-weight: normal;
+}
+
+td {
+    color: #f2ead8;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+p[style*="color: red"] {
+    background: rgba(120, 20, 20, 0.18);
+    border: 1px solid rgba(255, 120, 120, 0.25);
+    color: #ffb3b3 !important;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 22px;
+    background: #0b0b0b;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    color: #cbb67a;
+    font-size: 0.92rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 7px 12px;
+    }
+
+    main {
+        width: 94%;
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .product img {
+        height: 200px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 0.9rem;
+    }
+}
+.product-detail {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+}
+
+.product-detail img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+}
+
+.product-detail a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 30px;
+    color: #d4af37;
+}
+.search-bar {
+    width: min(720px, calc(100% - 32px));
+    margin: 16px auto 0;
+}
+
+.search-bar form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.search-field {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    color: #d4af37;
+    pointer-events: none;
+}
+
+.search-bar input {
+    height: 48px;
+    padding: 12px 16px 12px 46px;
+    border-radius: 14px;
+    font-size: 16px;
+    background: #101010;
+}
+
+.search-bar input::placeholder {
+    color: #b8ad93;
+    opacity: 1;
+}
+
+.search-bar input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12), 0 0 18px rgba(212, 175, 55, 0.12);
+}
+
+.search-bar button {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 12px 24px;
+    border-radius: 14px;
+    white-space: nowrap;
+}
+
+.search-bar button:focus-visible {
+    outline: 2px solid #f1d87a;
+    outline-offset: 3px;
+}
+
+.search-bar + main {
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        width: calc(100% - 24px);
+        margin-top: 12px;
+    }
+
+    .search-bar form {
+        gap: 6px;
+    }
+
+    .search-bar button {
+        padding: 12px;
+    }
+
+    .search-bar input {
+        padding-left: 36px;
+        padding-right: 8px;
+    }
+
+    .search-icon {
+        left: 10px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .search-bar + main {
+        margin-top: 16px;
+    }
+}
